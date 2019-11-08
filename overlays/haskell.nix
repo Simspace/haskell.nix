@@ -130,9 +130,9 @@ self: super: {
             };
 
         # Package sets for all stackage snapshots.
-        snapshots = import ../snapshots.nix { inherit (self) lib; inherit mkPkgSet stackage; };
+        snapshots = import ../snapshots.nix { inherit (self) lib ghc-boot-packages; inherit mkPkgSet stackage; };
         # Pick a recent LTS snapshot to be our "default" package set.
-        haskellPackages = snapshots."lts-13.26";
+        haskellPackages = snapshots."lts-14.13";
 
         # Programs for generating Nix expressions from Cabal and Stack
         # files. This version of nix-tools may be cross compiled.
