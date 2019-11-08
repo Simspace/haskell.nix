@@ -57,11 +57,13 @@ in
       "ghc-boot"
       "ghc" "Cabal" "Win32" "array" "binary" "bytestring" "containers"
       "directory" "filepath" "ghc-boot" "ghc-compact" "ghc-prim"
-      # "ghci" "haskeline"
+      "ghci"
+      #  "haskeline"
       "hpc"
       "mtl" "parsec" "process" "text" "time" "transformers"
       "unix" "xhtml"
-      # "stm" "terminfo"
+      # "stm"
+      "terminfo"
     ];
 
   options.bootPkgs = lib.mkOption {
